@@ -1,2 +1,2 @@
 #!/bin/bash
-ls $PATH | grep : | wc
+ls $PATH | grep / | wc
