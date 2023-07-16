@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -clt | head
+find -type f | head
