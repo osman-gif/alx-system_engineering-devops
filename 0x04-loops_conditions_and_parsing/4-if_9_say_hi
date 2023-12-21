@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script prints Best School 10 times.
+
+my_list=()
+counter=1
+while [ $counter -lt 10 ]; do
+	my_list[counter]="Best School"
+	if [ $counter -eq 9 ];
+	then
+		echo "Hi"
+	fi
+	echo "${my_list[counter]}"
+	((counter++))
+done
