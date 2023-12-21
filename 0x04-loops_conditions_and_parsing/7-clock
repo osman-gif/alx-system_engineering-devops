@@ -10,11 +10,14 @@ do
 	minute=1
 	while [ $minute -le 59 ]
 	do
-		if [ $hour -ne 12 ]
+
+		if [ $hour -eq 12 ]
 		then
-			echo "${minute}"
-			((minute++))
+			break
 		fi
+		echo "${minute}"
+		((minute++))
+
 	done
 	((hour++))
 done
