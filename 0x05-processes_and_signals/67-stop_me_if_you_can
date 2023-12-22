@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script kills a process
+process_name="7-highlander"
+kill "$(pgrep -f "$process_name")"
