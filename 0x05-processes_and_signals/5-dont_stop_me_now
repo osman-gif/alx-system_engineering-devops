@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # This script kills a process
-process_name="4-to_infinity_and_beyond"
-process_id= $(pgrep $process_name)
-echo $process_id
-#kill $process_id
+process_id=$(pgrep -f "4-to_infinity_and_beyond")
+kill "$process_id"
