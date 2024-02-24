@@ -51,6 +51,8 @@ Host *
     SendEnv LANG LC_*
     HashKnownHosts yes
     GSSAPIAuthentication yes
+Host 345257-web-01
     User ubuntu
     HostName 52.23.212.136
     IdentityFile ~/.ssh/school
+    PasswordAuthentication no
