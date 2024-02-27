@@ -53,6 +53,6 @@ Host *
     GSSAPIAuthentication yes
 Host 345257-web-01
     User ubuntu
-    HostName 52.23.212.136
+    HostName 100.26.237.10
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
