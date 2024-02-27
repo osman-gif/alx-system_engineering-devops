@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script installs nginx on a new ubuntu machine
+
+sudo apt-get install -y nginx && sed -i "s/8080/80/" /etc/nginx/sites-available/default
+ufw allow 'Nginx HTTP'
+echo Holberton School > /var/www/html/index.html
+service nginx start
