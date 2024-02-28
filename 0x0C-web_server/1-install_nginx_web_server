@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script installs nginx on a new ubuntu machine
-
-sudo apt-get install -y nginx && sed -i "s/8080/80/" /etc/nginx/sites-available/default
+apt-get update
+apt-get install -y nginx
 ufw allow 80
 echo Hello Word! > /var/www/html/index.html
 service nginx start
