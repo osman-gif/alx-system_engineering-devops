@@ -3,5 +3,5 @@
 apt-get update
 apt-get install -y nginx
 ufw allow 80
-echo Hello Word! > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 service nginx start
