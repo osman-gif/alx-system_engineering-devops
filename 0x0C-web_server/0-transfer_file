@@ -7,10 +7,6 @@ if [ $# -lt 3 ]; then
 	IP USERNAME PATH_TO_SSH_KEY"
 	exit 1
 fi
-transefer_file = $1
-ip = $2
-usr_name = $3
-key_path = $4
 
-scp $transfer_file $usr_name@$ip:/~ -i $key_path
+scp -i "$4" "$1" "$3@$2":~/
 
