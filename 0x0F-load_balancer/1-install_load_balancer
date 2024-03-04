@@ -10,4 +10,10 @@ echo -e '\nbackend my_backend' | tee -a /etc/haproxy/haproxy.cfg
 echo -e '\tbalance roundrobin' | tee -a /etc/haproxy/haproxy.cfg
 echo -e '\tserver web-01 54.89.108.39:80 check' | tee -a /etc/haproxy/haproxy.cfg
 echo -e '\tserver web-02 54.144.135.98:80 check' | tee -a /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+
+echo -e '\nfrontend my_frontend' | tee -a /etc/haproxy/haproxy.cfg
+echo -e '\tbind *:80' | tee -a /etc/haproxy/haproxy.cfg
+echo -e '\tmode http' | tee -a /etc/haproxy/haproxy.cfg
+echo -e '\tdefault_backend  my-backend' | tee -a /etc/haproxy/haproxy.cfg
+
+sudo service haproxy start
