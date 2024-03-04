@@ -2,6 +2,6 @@
 # This script installs nginx on a new ubuntu machine
 apt-get update
 apt-get install -y nginx
-ufw allow 80
+#ufw allow 80
 echo "Hello World!" > /var/www/html/index.html
 service nginx start
