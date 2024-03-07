@@ -5,5 +5,4 @@
 
 sudo sed -i -e 's/8080/80/g' /etc/nginx/sites-available/default
 
-sudo service nginx reload
-
+sudo service nginx restart
