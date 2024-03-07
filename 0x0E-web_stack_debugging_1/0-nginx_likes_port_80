@@ -3,6 +3,6 @@
 #default port for nginx is 80, but sometimes port 80 is
 #assigned to another process so port 8080 will be default
 
-sed -i -e 's/8080/80/g' /etc/nginx/sites-available/default
+sudo sed -i -e 's/8080/80/g' /etc/nginx/sites-available/default
 
-service nginx reboot
+sudo service nginx reload
