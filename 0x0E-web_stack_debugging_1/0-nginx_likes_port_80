@@ -4,6 +4,7 @@
 #assigned to another process so port 8080 will be default
 sudo sed -i -e 's/8080/80/g' /etc/nginx/sites-available/default
 #sudo sed -i -e 's/server_name/server_name -;/' /etc/nginx/sites-available/defaulta
-sudo sed -i -e 's/server_name.*;/server_name _;/g' /etc/nginx/sites-available/default
+#sudo sed -i -e 's/server_name.*;/server_name _;/g' /etc/nginx/sites-available/default
+
 
 sudo service nginx restart
