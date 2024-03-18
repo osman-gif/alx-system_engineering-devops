@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Modifies a container so that Nginx is running as the nginx user.
+
+sudo service stop nginx
+sudo service stop apache2
+
+chown nginx:nginx /etc/nginx/nginx.conf
+sed -i "s/80 default_/8080 default_/" /etc/nginx/sites-enabled/default
+su nginx -c "service nginx start"
