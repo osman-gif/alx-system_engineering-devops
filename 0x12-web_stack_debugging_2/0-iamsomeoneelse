@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script accept user as an arguemnt and execute th whoami command on that user
+read -r user
+su "$user" -c whoami
