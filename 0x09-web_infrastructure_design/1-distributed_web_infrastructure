@@ -1,0 +1,34 @@
+#INFRASTRUCTURE SPECIFICS
+
+IMAGE URL: https://imgur.com/a/qG5Y2QY
+1- ADDITIONAL ELEMENTS
+	Each additional element added, is for high performance and availability,
+	and elementating SPOF probelms
+2- BALANCER DISTRIBUTING ALOGRITHM
+	The loadbalancer is using the roundrobin alogrithm.
+	How it works? This kind of algorithm distributes loads in a sequential order,
+	for example if I have 3 servers A, B and C, and if I forward the first request to
+	server A, the second to B and the third to C and recieved another request then it
+	will got to A, and it will continue in this cycle
+3- ACTIVE_ACTIVE or PASSIVE_ACTIVE
+	The Loadbalancer is using the active_activer set up,
+	Acive active sets up two servers to serve at the same time concurntly, while passive
+	active sets up one server to serve, and the second server to stay in stand by, the
+	second server can be promoted to the active state when the frist server is down
+4- DATABASE (PRIMARY_REPLICA)
+	The primary_replica works as follows. The primary database is the one responsible for
+	all write operation, it does not recieves and read operation, while the replica is the
+	one responsible for all read operations and it does not recieve and write operation.
+	data are copied to the replica from the primary database
+5- DIFFERENCE (PRIMAY AND REPLICA)
+	The primary node is the MAIN node, it is the one that write and updates the database.
+	The replica only gets its data from the primary node in a consistant manner, it handles 	all read operation.
+
+#ISSUES
+	SPOF:
+		The only sigle point of failure here is the loadbalancer, if it went down
+		then the system also go down
+	SECURITY:
+		Because there is no firewall and we are not using https, the hacker can steal
+		our data and damage our system, to avoid this is to set up a firewall and use
+		https protocol and have an SSL or TLS certificate

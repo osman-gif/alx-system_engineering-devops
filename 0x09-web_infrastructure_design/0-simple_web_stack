@@ -1,0 +1,43 @@
+#INFRASTRUCTURE SPECIFICS
+
+IMAGE URL: https://imgur.com/a/J1qZ3Hb
+
+1-SERVER
+	A server is a computer that provides services to other computers called clients, in most	cases its a computer with strong features with no keyboard, and it has an OS installed o	n it.
+2-WEBSERVER
+	A webserver is a software program, that recieves a http/https request and returns a
+	and http/https response(most cases static response), if the response was dynamic then
+	it delegates the request to other server side program or an app server
+3-DNS RECORD TYPE(WWW)
+	The www record type in www.foobar.com is a CNAME record, an alias to the foobar.com
+	record
+4-ROLE OF DOMAIN NAME
+	It is simpler and easier to remember than the IP of the server that is hosting your
+	side, for example the IP adderess of the server hosting the foobar.com is 192.1.34.5
+	it is harder to remember right?, but if we use the domain name (foobar.com) then it is
+	easy to remember and stright forward
+5-APP SERVER
+	An app server is a software application that process the application logic and execute
+	application code (code base), it also connect to the database if needed
+6-DATABASE SERVER
+	The database server is used to store data in an organized way, make easy to restore and
+	manage data
+7-WHAT IS THE SERVER USING TO COMMUNICATE WITH USER'S COMPUTER
+	It is using the http protocol
+
+#ISSUES
+	SPOF:
+		The SINGE POINT OF FAILURE here are
+		1- having only one sever, if it stopped then the whole system is stopped
+		2- having only one app server, web server, database server and one codebase
+		   if any one of this malfunctioned then the whole system will not function
+		   properly
+	DOWNTIME:
+		When doing maintenance, the downtime of the system could be high, because
+		we have only one component for every function of the system, and when
+		maintenance of any component is taking place, that means the componet will
+		be of duty and ther is no other componet that will replace it during the
+		process
+	TOO MUCH TRAFFIC:
+		When the system is facing high rate of traffic, we can not scale it, because
+		we have no load balancer 
