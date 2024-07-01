@@ -1,3 +1,4 @@
+#configuration
 file_line{ 'config':
   path  => '/home/ajang/config',
   line  => "\tPasswordAuthentication no\n\tIdentityFile ~/.ssh/school",
