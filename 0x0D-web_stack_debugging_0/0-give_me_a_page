@@ -1,1 +1,8 @@
+#!/usr/bin/env bash
+#This script get Apache to run on the container and to return a page
+apt update
+apt upgrade
+apt install apache2
 service apache2 start
+echo "Hello Holberton" | sudo tee /var/www/html/index.html
+service apache2 restart
