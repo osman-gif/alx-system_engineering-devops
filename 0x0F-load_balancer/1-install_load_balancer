@@ -8,14 +8,14 @@ service haproxy start
 back="
 \nbackend my_backend\n
 \tbalance roundrobin\n
-\tserver web-01 54.89.108.39:80 check\n
-\tserver web-02 54.144.135.98:80 check\n
+\tserver web-01 54.162.48.101:80 check\n
+\tserver web-02 100.26.167.222:80 check\n
 "
 echo -e $back | tee -a /etc/haproxy/haproxy.cfg
 
 front="
 frontend my_frontend\n
-\tbind 54.144.135.98:80, 54.89.108.39:80\n
+\tbind 54.162.48.101:80, 100.26.167.222:80\n
 \tmode http\n
 \tuse_backend my_backend\n
 "
