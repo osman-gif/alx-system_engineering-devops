@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 # add a custom header(name: X-Served-By, value: hostname)
+apt-get update
+apt-get install -y nginx
+service nginx start
+ufw allow 80
+echo "Hello World!" > /var/www/html/index.html
+service nginx restart
 #sed -i "/23a add_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
 sudo sed -i "24a\\\tadd_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
