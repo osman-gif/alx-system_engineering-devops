@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# add a custom header(name: X-Served-By, value: hostname)
+#sed -i "/23a add_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
+sudo sed -i "24a\\\tadd_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
