@@ -4,11 +4,11 @@
 #First install software-properties-common package
 apt install --no-install-recommends software-properties-common -y
 #Then reference the HAproxy repository, ppa:vbernat/haproxy
-apt add-apt-repository ppa:vbernat/haproxy-2.8
+add-apt-repository ppa:vbernat/haproxy-2.8
 #Update Ubuntu package list
 apt update
 #Now install HAproxy
-apt install haproxy=2.8.\* -y
+apt install haproxy=2.8.* -y
 service haproxy start
 
 back="
