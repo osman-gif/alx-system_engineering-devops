@@ -8,3 +8,4 @@ echo "Hello World!" > /var/www/html/index.html
 service nginx restart
 #sed -i "/23a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
 sudo sed -i "23a\\\tadd_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
+service nginx restart
