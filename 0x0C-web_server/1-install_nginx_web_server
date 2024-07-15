@@ -6,3 +6,4 @@ service nginx start
 ufw allow 80
 echo "Hello World!" > /var/www/html/index.html
 service nginx restart
+

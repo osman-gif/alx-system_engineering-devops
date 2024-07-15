@@ -1,8 +1,9 @@
 #configuration
-file_line{ 'config':
-  path  => '/home/ajang/config',
-  line  => "\tPasswordAuthentication no\n\tIdentityFile ~/.ssh/school",
-  match => '^\tPasswordAuthentication no\n\tIdentityFile ~/.ssh/school$',
-  append_on_no_match => false,
+augeas{ 'configure the .ssh/config'
+  context => '.ssh/config',
+  changes => [
+     'insert after /.ssh/config/*[contains(text(), "Host *")] "PasswordAuthentication no"',  
+  ],
+  onlyif => 'match /.ssh/config/*[contains(text(), "PasswordAuthentication no")] size == 0',
 }
 
