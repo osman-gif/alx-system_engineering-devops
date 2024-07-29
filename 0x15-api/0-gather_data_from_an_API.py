@@ -6,12 +6,12 @@ https://jsonplaceholder.typicode.com/todos/
 """
 
 import json
-from sys import argv
+import sys
 
 import requests
 
 if __name__ == '__main__':
-    emp_id = argv[1]
+    emp_id = sys.argv[1]
     todo_url = f'https://jsonplaceholder.typicode.com/todos/'
     user_url = f'https://jsonplaceholder.typicode.com/users/{emp_id}'
 
