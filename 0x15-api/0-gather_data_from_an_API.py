@@ -5,9 +5,9 @@ https://jsonplaceholder.typicode.com/todos/
  returns information about his/her TODO list progress.
 """
 
-import requests
-import json
 from sys import argv
+import json
+import requests
 
 if __name__ == '__main__':
     emp_id = argv[1]
@@ -33,4 +33,4 @@ if __name__ == '__main__':
     first_line = f"Employee {e_name} is done with tasks({c_tasks}/{t_tasks}):"
     print(first_line)
     for task_title in tasks_title_list:
-        print(f"     {task_title}")
+        print(f"\t {task_title}")
