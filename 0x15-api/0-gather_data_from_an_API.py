@@ -6,9 +6,8 @@ https://jsonplaceholder.typicode.com/todos/
 """
 
 import json
-import sys
-
 import requests
+import sys
 
 if __name__ == '__main__':
     emp_id = sys.argv[1]
