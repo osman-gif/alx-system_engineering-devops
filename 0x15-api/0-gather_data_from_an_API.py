@@ -30,7 +30,7 @@ if __name__ == '__main__':
                 tasks_title_list.append(todo.get('title'))
                 c_tasks = c_tasks + 1
 
-    first_line = f"Employee {e_name} is done with tasks({c_tasks}/{t_tasks})"
+    first_line = f"Employee {e_name} is done with tasks({c_tasks}/{t_tasks}):"
     print(first_line)
     for task_title in tasks_title_list:
         print(f"     {task_title}")
