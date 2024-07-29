@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-import requests
-import json
-from sys import argv
 """This is a Python script that, using this REST API
 https://jsonplaceholder.typicode.com/todos/
 , for a given employee ID,
  returns information about his/her TODO list progress.
 """
+
+import requests
+import json
+from sys import argv
+
 emp_id = argv[1]
 todo_url = f'https://jsonplaceholder.typicode.com/todos/'
 user_url = f'https://jsonplaceholder.typicode.com/users/{emp_id}'
