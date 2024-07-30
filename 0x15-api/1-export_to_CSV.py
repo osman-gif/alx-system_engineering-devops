@@ -24,12 +24,11 @@ if __name__ == '__main__':
         if todo.get('userId') == int(emp_id):
             status = todo.get('completed')
             title = todo.get('title')
-            task_details = f'"{emp_id}","{username}","{status}","{title}"'
+            task_details = list([emp_id, username, status, title])
 
             all_tasks.append(task_details)
             t_tasks = t_tasks + 1
 
     with open('USER_ID.csv', 'x', newline='\n') as file:
-        csv_writer = csv.writer(file, quotechar=' ')
-        for task in all_tasks:
-            csv_writer.writerow([task])
+        csv_writer = csv.writer(file, quoting=csv.QUOTE_NONNUMERIC)
+        csv_writer.writerows(all_tasks)
