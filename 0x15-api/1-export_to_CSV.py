@@ -17,14 +17,14 @@ if __name__ == '__main__':
     todos = requests.get(todo_url)
     t_tasks = 0
     all_tasks = []
+    username = user.json().get('username')
 
-    e_name = user.json().get('name')
     for index, todo in enumerate(todos.json()):
 
         if todo.get('userId') == int(emp_id):
             status = todo.get('completed')
             title = todo.get('title')
-            task_details = f'"{emp_id}","{e_name}","{status}","{title}"'
+            task_details = f'"{emp_id}","{username}","{status}","{title}"'
 
             all_tasks.append(task_details)
             t_tasks = t_tasks + 1
