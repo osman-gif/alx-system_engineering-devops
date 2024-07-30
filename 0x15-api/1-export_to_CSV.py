@@ -24,7 +24,7 @@ if __name__ == '__main__':
         if todo.get('userId') == int(emp_id):
             status = todo.get('completed')
             title = todo.get('title')
-            task_details = list([emp_id, username, status, title])
+            task_details = list([emp_id, username, str(status), title])
 
             all_tasks.append(task_details)
             t_tasks = t_tasks + 1
