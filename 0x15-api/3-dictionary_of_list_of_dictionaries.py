@@ -25,13 +25,14 @@ if __name__ == '__main__':
         userId = user.get("id")
         user_tasks = []
         username = user.get('username')
+        task = {}
         for todo in todos.json():
-            task = {}
-            task['completed'] = todo.get('completed')
-            task["task"] = todo.get('title')
-            task["username"] = username
-            # all_tasks.append(task)
-            user_tasks.append(task)
+            if todo.get('userId') == userId:
+                task['completed'] = todo.get('completed')
+                task["task"] = todo.get('title')
+                task["username"] = username
+                # all_tasks.append(task)
+                user_tasks.append(task)
         usr[userId] = user_tasks
 
     with open("todo_all_employees.json", 'w') as file:
