@@ -28,9 +28,11 @@ if __name__ == '__main__':
         task = {}
         for todo in todos.json():
             if todo.get('userId') == userId:
-                task['completed'] = todo.get('completed')
-                task["task"] = todo.get('title')
                 task["username"] = username
+                task["task"] = todo.get('title')
+                task['completed'] = todo.get('completed')
+                
+                
                 # all_tasks.append(task)
                 user_tasks.append(task)
         usr[userId] = user_tasks
